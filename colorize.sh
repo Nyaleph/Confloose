@@ -1,3 +1,5 @@
+#!/bin/sh
+
 screen_name=$(xrandr --current | grep primary | cut -f 1 -d " ")
 
 function randColor() {
