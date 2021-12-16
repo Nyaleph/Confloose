@@ -1,5 +1,9 @@
 #!/bin/sh
 
+curl https://images5.alphacoders.com/666/thumb-1920-666580.jpg --output wallpaper.jpg
+feh --bg-fill wallpaper.jpg
+
+
 screen_name=$(xrandr --current | grep primary | cut -f 1 -d " ")
 
 function randColor() {
