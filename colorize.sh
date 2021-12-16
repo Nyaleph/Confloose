@@ -15,8 +15,7 @@ xrandr --output $screen_name --gamma 0.$r:0.$g:0.$b
 function blink_time() {
     sleep_time=$1
     amount=$2
-    echo "Change blink $sleep_time x $amount"
-    for i in $(seq $amount); do echo $i; randColor; sleep $sleep_time; done;
+    for i in $(seq $amount); do randColor; sleep $sleep_time; done;
 }
 
 while true; do
