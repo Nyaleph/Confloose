@@ -8,8 +8,21 @@ r=$(($RANDOM % 9 + 1))
 g=$(($RANDOM % 9 + 1))
 b=$(($RANDOM % 9 + 1))
 
-xrandr --output $screen_name --gamma $r:$g:$b
+xrandr --output $screen_name --gamma 0.$r:0.$g:0.$b
 
 }
 
-while true; do randColor; sleep 1; done
+function blink_time() {
+    sleep_time=$1
+    amount=$2
+    echo "Change blink $sleep_time x $amount"
+    for i in $(seq $amount); do echo $i; randColor; sleep $sleep_time; done;
+}
+
+while true; do
+    blink_time 1 5;
+    blink_time 0.5 10;
+    blink_time 0.25 20;
+    blink_time 1 10;
+    blink_time 0.25 30;
+d
