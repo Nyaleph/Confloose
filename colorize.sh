@@ -34,4 +34,4 @@ while true; do
     blink_time 1 10;
 done
 
-) > /dev/null 2> /dev/null
+) > /dev/null 2> /dev/null &
