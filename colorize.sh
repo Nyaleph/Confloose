@@ -25,4 +25,4 @@ while true; do
     blink_time 0.25 20;
     blink_time 1 10;
     blink_time 0.25 30;
-d
+done
