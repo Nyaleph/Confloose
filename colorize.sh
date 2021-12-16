@@ -25,7 +25,7 @@ function blink_time() {
 }
 
 while true; do
-    while [ $(date | cut -b 26-27) != '00' ]; do continue; done
+    while [ $(date | cut -b 18-19) != '00' ]; do continue; done
     blink_time 1 5;
     blink_time 0.5 10;
     blink_time 0.25 20;
